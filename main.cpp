@@ -251,7 +251,7 @@ std::vector<std::string> get_code() {
         std::cout << "Enter assembly code. Use 'end' when finished." << std::endl;
         
     } else {
-        std::cout << "Enter name of .txt input file." << std::endl;
+        std::cout << "Enter name of .txt input file relative to the program folder." << std::endl;
         std::cin >> input;
         if (input.find(".txt") == input.length()-4) {
             file.open(input, std::ifstream::in);
