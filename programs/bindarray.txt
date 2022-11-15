@@ -1,0 +1,41 @@
+mov #100, r5
+
+; array declaration
+; note that array is stored in registers, as virtual machine has no separated memory
+; all memory would be the same speed regardless, so
+; registers are constructed en masse as alternative to external memory
+
+mov #10, @r5+  ; first element of array is size
+mov #3, @r5+   ; second element is lower bound
+mov #6, @r5+   ; third element is upper bound
+mov #1, @r5+   ; rest of elements are array values
+mov #2, @r5+
+mov #3, @r5+
+mov #4, @r5+
+mov #5, @r5+
+mov #6, @r5+
+mov #7, @r5+
+mov #8, @r5+
+mov #9, @r5+
+mov #10, @r5
+
+; code loops through array and confines to upper and lower bounds
+
+mov #100, r5
+mov @r5+, r10 ;counter
+mov @r5+, r6  ;lower bound
+mov @r5+, r7  ;upper bound
+
+lower cmp @r5, r6
+jle upper
+mov r6, @r5
+
+upper cmp @r5, r7
+jge last
+mov r7, @r5
+
+last prt @r5+
+dec r10
+jnz lower
+
+end

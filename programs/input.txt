@@ -1,0 +1,3 @@
+mov #44, r5
+prt r5
+end

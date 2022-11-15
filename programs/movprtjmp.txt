@@ -1,0 +1,10 @@
+; program demonstrates use of jmp function
+
+mov #-53, r5
+jmp tst
+mov #45, r5
+tst mov #46, r6
+sub #55, r6 ;number subtraction
+prt r5
+prt r6
+end

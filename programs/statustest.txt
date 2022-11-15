@@ -1,0 +1,16 @@
+; program test status flags
+; use debug print of status flags in execute_instruction to see flag activation
+
+mov #30000, r5
+add #10000, r5 ; overflow flag
+prt r5
+
+mov #10, r6
+sub #15, r6
+prt r6
+
+mov #22h, r7
+sub #34, r7
+prt r7
+
+end

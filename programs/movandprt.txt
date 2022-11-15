@@ -1,0 +1,7 @@
+mov #44, r5
+mov #23h, r6
+mov #00010110b, r7
+prt r5
+prt r6
+prt r7
+end
